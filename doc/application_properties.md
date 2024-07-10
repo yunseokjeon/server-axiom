@@ -2,7 +2,7 @@
 spring.application.name=server-axiom
 
 # Spring Batch Job enable
-spring.batch.job.enabled=true
+spring.batch.job.enabled=false
 
 # H2
 # http://localhost:8080/h2-console
