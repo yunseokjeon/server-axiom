@@ -20,11 +20,12 @@ public class Scheduler {
     private final Job parquetJob;
     private final JobLauncher jobLauncher;
 
-    @Scheduled(cron = "* * * * * *", zone = "Asia/Seoul")
+    @Scheduled(cron = "0 25 18 * * *", zone = "Asia/Seoul")
     public void scheduledRun() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
-        JobParameters params = new JobParametersBuilder()
-                .addString("JobId", String.valueOf(System.currentTimeMillis()))
-                .toJobParameters();
-        jobLauncher.run(parquetJob, params);
+//        JobParameters params = new JobParametersBuilder()
+//                .addString("JobId", String.valueOf(System.currentTimeMillis()))
+//                .toJobParameters();
+//        jobLauncher.run(parquetJob, params);
+        log.info("Hello Scheduler");
     }
 }
