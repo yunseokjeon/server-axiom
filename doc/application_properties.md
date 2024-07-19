@@ -1,3 +1,6 @@
+
+resources/application.properties
+
 ```
 spring.application.name=server-axiom
 

@@ -17,8 +17,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
-
 import java.io.*;
+
 
 
 @Slf4j
@@ -74,13 +74,13 @@ public class BatchJobConfiguration {
     @Bean
     public Step parquetStep(JobRepository jobRepository, Tasklet parquetTasklet, PlatformTransactionManager platformTransactionManager){
         return new StepBuilder("parquetStep", jobRepository)
-                .tasklet(parquetTasklet, platformTransactionManager).build();
+                .tasklet(parquetTasklet, platformTransactionManager)
+                .build();
     }
 
     @Bean
     public Tasklet parquetTasklet() {
         return (((contribution, chunkContext) -> {
-            readFile(bucketName, fileName);
             return RepeatStatus.FINISHED;
         }));
     }
