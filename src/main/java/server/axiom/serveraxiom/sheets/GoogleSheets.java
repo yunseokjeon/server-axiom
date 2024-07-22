@@ -21,7 +21,7 @@ import static com.google.api.client.googleapis.auth.oauth2.GoogleCredential.from
 
 public class GoogleSheets {
 
-    private static final String CREDENTIALS_FILE_PATH = "serveraxiom-14649f51fc3e.json";
+    private static final String CREDENTIALS_FILE_PATH = "credentials.json";
     private static final String APPLICATION_NAME = "google-sheet-project";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS);

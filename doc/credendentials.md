@@ -1,4 +1,4 @@
-resources/serveraxiom-14649f51fc3e.json
+resources/credentials.json
 
 ```json
 {
